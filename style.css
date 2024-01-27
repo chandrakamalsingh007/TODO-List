@@ -197,14 +197,12 @@ ul li span:hover{
     color: lightseagreen;
     border-top: 2px solid lightskyblue;
  }
-  /*Responsive*/
-  @media only screen and (max-width:530px){
-    .container{
-        margin:0 20px;
-        max-width: 96%;
-        min-width: 96%;
-    }
+ .text.single-line {
+    overflow: auto;
+    text-overflow:ellipsis;
+    white-space: nowrap;
   }
+  
 
   #filter{
     background: rgb(22, 22, 22);
@@ -224,4 +222,63 @@ ul li span:hover{
     transition: 0.5s;
     position: relative;
   }
+  /*responsive*/
+  @media only screen and (max-width: 530px) {
+    .container {
+        margin: 0 10px;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    .todo-app {
+        margin: 50px auto 20px;
+        padding: 20px;
+    }
+
+    ul li {
+        padding: 15px 10px 15px 50px;
+        font-size: 18px;
+    }
+
+    .todo-filter {
+        padding-bottom: 15px;
+        gap: 20px;
+    }
+    button{
+        padding: 8px 20px ;
+        font-size: 15px;
+        gap:5px;
+    }
+    #filter{
+        padding: 5px 10px;
+        gap:0px;
+        text-align: center;
+    }
+    input{
+        padding-left: 10px;
+        font-size: 15px;
+       
+    }
+    .row{
+        
+        justify-content: space-between;
+    }
+    ul li{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+    }
+    ul li::before{
+        top:auto;
+        height: 12px;
+        width: 12px;
+
+    }
+   
+
+    .foot {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
   

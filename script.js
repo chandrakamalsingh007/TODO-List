@@ -8,12 +8,20 @@ function addTask(){
         alert("You must write some task!!!");
 
     }else{
-        let li=document.createElement("li");
-        li.innerHTML=inputBox.value;
+        let li = document.createElement("li");
+        let output = document.createElement("output");
+        output.className = "text single-line";
+        output.textContent = inputBox.value; // Use textContent to set the content
+
+        li.appendChild(output);
+        
+        // Append the list item to the list container
         listContainer.appendChild(li);
-        let span=document.createElement("span");
-        span.innerHTML="\u00d7";
+
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
         li.appendChild(span);
+    
     }
     inputBox.value='';
     saveData();
