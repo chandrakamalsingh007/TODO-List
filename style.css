@@ -135,11 +135,13 @@ ul li span{
     line-height: 50px;
     text-align: center;
     border-radius: 10px;
+    transition: 0.3s;
 }
 ul li span:hover{
     background: lightseagreen;
     color: black;
     height: 70px;
+    box-shadow: 4px 0px 16px 4px lightseagreen;
     
 }
 .todo-filter{
