@@ -1,5 +1,17 @@
 # TODO-list
 # https://chandrakamalsingh-todolist.netlify.app/
 
-<img src= "https://www.istockphoto.com/photo/hand-holding-pen-planning-to-do-list-on-a-notebook-laptop-and-coffee-cup-on-office-gm1456363935-491414120 ">
-<strong>This is my first project in web development using HTML,CSS,JAVASCRIPT and stored in Local storage.</strong>
+<img src= "image.png">
+<strong>This is my first project in web development using HTML,CSS,JAVASCRIPT and stored in Local storage.
+<br>With functionalities like:-
+<ul>
+<li>Add task</li>
+<li>Show task</li>
+<li>Checked complete task</li>
+<li>Delete all task</li>
+<li>Delete particular task</li>
+<li>Show total task,pending task and completed task</li>
+<li>show task according to their value either completed or pending</li>
+</ul>
+</strong>
+
