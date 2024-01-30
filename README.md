@@ -1,2 +1,2 @@
 # TODO-list
-My first web development project using HTML CSS and JAVASCRIPT.
+<strong>This is my first project in web development using HTML,CSS,JAVASCRIPT </strong>
