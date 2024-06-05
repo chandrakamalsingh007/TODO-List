@@ -1,7 +1,7 @@
 # TODO-App
 # https://chandrakamalsingh-todoapp.netlify.app
 
-<img src= "todoapp,png">
+<img src= "todoapp.png">
 <strong>This is my first project in web development using HTML,CSS,JAVASCRIPT and stored in Local storage.
 <br>With functionalities like:-
 <ul>
