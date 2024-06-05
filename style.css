@@ -49,6 +49,10 @@ label {
   --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   --footer-bg-color: #040d12;
 }
+.name{
+  background-color: white;
+  font-size: 0px;
+}
 
 button{
   width: 20%;
@@ -141,6 +145,9 @@ button{
         -moz-border-radius: 10px;
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
+}
+ & input:focus::placeholder {
+  color: transparent;
 }
 
 }
