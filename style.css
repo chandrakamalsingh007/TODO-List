@@ -214,8 +214,8 @@ button{
     position: absolute;
     
     background-image: url(images/unchecked.png);
-    height: 15px;
-    width: 15px;
+    height: 18px;
+    width: 18px;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
@@ -335,6 +335,14 @@ ul::-webkit-scrollbar-thumb:hover {
 
   .section-add--task{
     margin-bottom:12px;
+  }
+  .section-list{
+    & ul li::before{
+      top: 8px;
+      left: 8px;
+      
+  }
+  
   }
 }
 
