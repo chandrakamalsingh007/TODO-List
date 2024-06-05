@@ -345,7 +345,7 @@ ul::-webkit-scrollbar-thumb:hover {
   }
   .section-list{
     & ul li::before{
-      top: 10px;
+      top: 8px;
       
   }
   
