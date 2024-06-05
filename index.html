@@ -2,54 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do list</title>
+    <title>TO DO App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="images/todo-icon" href="images/icon.png">
 </head>
+</head>
 <body>
-    <div class="container">
-        <div class="todo-app">
-            <h2>TO DO LIST<img src="images/icon.png" alt="to do list icon"></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add your task">
-                <button onclick="addTask()"><i class="fa-regular fa-plus"></i><p>Add</p></button>
+    <main class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>TO DO LIST</h2>
+                <img src="images/icon.png" alt="to do list icon">
             </div>
-            <div class="todo-filter">
-                <div class="dropdown">
-                    <select name="filter" id="filter" onchange="handleFilterChange()">
-                        <option value="all" selected>All</option>
-                        <option value="pending">Pending</option>
-                        <option value="completed" >Completed</option>
-                    </select>
-                </div>
 
-                <div>
-                <button onclick="deleteAll()"><i class="fa-solid fa-trash"></i><p>Delete All</p></button>
+            <!-- ========== Start add task ========== -->
+            <div class="section-add--task">
+                <input type="text" id="input-box" placeholder="Add your task">
+                <button onclick="addTask()"><i class="fa-regular fa-plus"></i>Add</button>
             </div>
-            </div>
-            <ul id="list-container">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
-                
-            </ul>
-            <div class="foot">
-                <div class="complete-task">
-                    <p>Total Task: <span id="t-count">0</span></p>
+            
+            <!-- ========== End add task ========== -->
+
+            <!-- ========== Start Filter Section ========== -->
+                <div class="section-filter">
+                    <div class="dropdown">
+                        <select name="filter" id="filter" onchange="handleFilterChange()">
+                            <option value="all" selected>All</option>
+                            <option value="pending">Pending</option>
+                            <option value="completed" >Completed</option>
+                        </select>
                     </div>
-                <div class="complete-task">
-                    <p>Completed: <span id="c-count">0</span></p>
+                
+    
+                    <div>
+                    <button onclick="deleteAll()"><i class="fa-solid fa-trash"></i>Delete all</button>
                 </div>
-                <div class="remaining-task">
-                    <p>Remaining: <span id="r-count">0</span></p>
                 </div>
+                
+            
+            <!-- ========== End Filter Section ========== -->
+
+            <!-- ========== Start list Section ========== -->
+            <div class="section-list">
+                <ul id="list-container">
+                    <!-- <li class="checked"><input type="radio"  >Task 1</li>
+                    <li>Task 2</li>
+                    <li>Task 3</li> -->
+                    
+                </ul>
+            </div>
+            
+            <!-- ========== End list Section ========== -->
+
+            <!-- ========== Start Footer Section ========== -->
+            <div class="section-footer">
+                <div class="foot">
+                    <div class="complete-task">
+                        <p>Total Task: <span id="t-count">0</span></p>
+                        </div>
+                    <div class="complete-task">
+                        <p>Completed: <span id="c-count">0</span></p>
+                    </div>
+                    <div class="remaining-task">
+                        <p>Remaining: <span id="r-count">0</span></p>
+                    </div>
+            </div>
+            </div>
+            
+            <!-- ========== End Footer Section ========== -->
+            
+            
+            
+            
         </div>
-        
-        </div>
-    </div>
+    </main>
     <script src="script.js"></script>
+    
 </body>
 </html>

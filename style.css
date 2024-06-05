@@ -1,265 +1,388 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700;900&family=Poppins:wght@200;300;400;600&family=Quicksand:wght@300;400;500;600;700&family=Urbanist:wght@300;400;500;600;700;800;900&display=swap");
+
+/* base rule  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px  */
+  /* scroll-behavior: smooth; */
+  scroll-snap-type: Y proximity;
 }
 
 
-.container{
-    background:linear-gradient(110deg,rgb(5, 56, 73),rgb(26, 22, 22));
-    width:100%;
-    min-height: 100vh;
-    padding: 10px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
 }
-.todo-app{
+
+p,
+a,
+label {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+:root {
+  --main-color: #0062ff;
+  --supporting-color: #ebf3fe;
+  --font-color: #424242;
+  /* --bg-color: #ffffff; */
+  --bg-color: #f7fcff;
+  --heading-color: #000a19;
+  --hero-heading-color: #003b99;
+  --white-color: #ffffff;
+  --para-color: #504e4d;
+  --bnt-hover-bg-color: #003b99;
+  --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --footer-bg-color: #040d12;
+}
+
+button{
+  width: 20%;
+  color: lightseagreen;
+  padding: 5px 15px 5px  10px;
+  border: none;
+  outline:none;
+  border: 2px solid lightseagreen;
+  border-radius: 10px;
+  cursor:pointer;
+  align-items: center;
+  display: inline-flex; 
+  justify-content: center;
+  gap:.5rem;
+  transition: 0.5s;
+  position: relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    max-width: 540px;
-    background:black;
-    margin:100px auto 20px;
-    padding: 40px 30px 20px;
-    border-radius: 10px;
+    height: 100vh;
+    background-image:linear-gradient(
+      to top right,
+      #3d86fa,
+      #4484fb,
+      #679eff,
+      #b3d2ff,
+      #ebf3fe
+    ); 
+    
 }
-.todo-app h2{
+
+.container {
+  width: 80%;
+  max-width: 540px;
+  min-height:350px;
+  margin-top: 1rem;
+  background-color: white;
+  box-shadow: rgba(34, 38, 41, 0.3) 0px 1px 2px 0px,    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  padding: 1rem 3rem 0 3rem;
+  border-radius:10px ;
+  -webkit-border-radius:10px ;
+  -moz-border-radius:10px ;
+  -ms-border-radius:10px ;
+  -o-border-radius:10px ;
+}
+
+.section-header{
     color:lightseagreen;
     display: flex;
     align-items: center;
     font-weight:bold;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
+    gap: 1.2rem;
+    cursor:pointer;
+    & h2{
+      font-size: 18px;
+    }
 }
-.todo-app h2 img{
+
+.section-header img{
     margin-left:5px;
-    height: 50px;
-    width:50px;
+    width:12%;
 }
-.row {
+
+.section-add--task{
+    width:100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    
+
+    & #input-box{
+
+        width: 100%;
+        height: auto;
+        padding-left: 10px;
+        border: 2px solid lightseagreen;
+        border-radius: 10px;
+        outline: none;
+        background: transparent;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+}
+
+}
+
+.section-filter{
+    width: 100%;
+    height: 5rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgb(202, 200, 200);
-    padding-left: 20px;
-    margin-bottom: 25px;
-    border-radius: 30px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+  
+    border-bottom: 2px solid lightskyblue;
+
+    & #filter{
+      width:15rem;
+      height:auto;
+      color: lightseagreen;
+      padding: 6px 20px 6px 20px;
+      border: 2px solid lightseagreen;
+      border-radius: 10px;
+      cursor:pointer;
+      outline: none;
+      align-items: center;
+      display: inline-flex;
+      justify-content: space-between;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+}
+ & button{
+  width:auto;
+ padding: 8px 30px 8px 20px;
+ gap: 1rem;
+ }
 }
 
-input{
-    flex:1;
-    border: none;
-    outline:none;
-    background: transparent;
-    font-size: 20px;
-}
-button{
-    background: rgb(22, 22, 22);
-    color: lightseagreen;
-    padding: 15px 40px;
-    font-size: 20px;
-    border: none;
-    outline:none;
-    border: 2px solid lightseagreen;
-    border-radius: 20px;
-    cursor:pointer;
-    align-items: center;
-    display: inline-flex;
-    justify-content: space-between;
-    gap: 10px;
-    text-align: start;
-    transition: 0.5s;
-    position: relative;
-}
+.section-list{
+  width:100%;
+  min-height: 200px;
+  padding:0 0 0 0px;
+  /* background-color: aqua; */
+  & ul{
+    height:200px;
+    overflow: auto;
 
-button:hover{
-    color:black;
-    background-color: lightseagreen;
-    box-shadow: 4px 0px 16px 4px lightseagreen;
-}
-ul li{
+    overflow-y: auto;
+  }
+
+  & ul li{
     list-style:none;
-    font-size:20px;
-    padding: 20px 10px 20px 70px;
+    font-size:15px;
+    padding: 10px 5px 10px 30px;
     user-select: none;
     cursor: pointer;
     position: relative;
-    background:rgb(46, 45, 45);
+    
     background-size: cover;
     border-radius: 15px;
     display: flex;
-    align-items: center;
+    align-items: center; 
     color:lightseagreen;
-    border: 2px solid lightseagreen;
-    margin-top: 20px;
+    margin-top: 5px;
     
     
 }
-ul li::before{
+ & ul li::before{
     content: '';
     position: absolute;
-    background-color: rgb(173, 161, 161);
+    
     background-image: url(images/unchecked.png);
-    height: 28px;
-    width: 28px;
+    height: 15px;
+    width: 15px;
     background-size: cover;
     background-position: center;
     border-radius: 50%;
-    top: 20px;
+    top: 12px;
     left: 8px;
-    border: 2px solid lightseagreen;
+    
 }
 
-ul li.checked{
-    color:#555;
+ & ul li.checked{
+    
     text-decoration: line-through;
 }
-ul li.checked::before{
+ & ul li.checked::before{
     background-image: url(images/checked.png);
-    background-blend-mode: overlay;
-    background-color: lightseagreen ;
-    border:2px solid black;
-    color: white;
-    box-shadow: 0px 2px 16px 4px lightseagreen;
-    
-    
-}
-
-
-ul li span{
-
-    position: absolute;
-    right: 1px;
-    background-size: cover;    
-    width:60px;
-    height: 60px;
-    font-size: 30px;
+    background-color: limegreen;
     color:white;
-    line-height: 50px;
-    text-align: center;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-ul li span:hover{
-    background: lightseagreen;
-    color: black;
-    height: 70px;
-    box-shadow: 4px 0px 16px 4px lightseagreen;
+    background-blend-mode: overlay;
+    
+    
     
 }
-.todo-filter{
-    padding-bottom: 25px;
-    display: flex;
-    justify-content:center;
-    gap:50px;
-    align-items: center;
-    width: 100%;
-    height:100%;
-    border-bottom: 2px solid lightskyblue;
+
+& ul li span{
+
+  position: absolute;
+  right: 0.5px;
+  background-size: cover;    
+  width:12%;
+  height: fit-content;
+  font-size: 20px;
+  line-height: 2;
+  text-align: center;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+ & ul li span:hover{
+  background: lightseagreen;
+  color: black;
+  height: fit-content;
+  box-shadow: 4px 0px 16px 4px lightseagreen;
+  
+}
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+  font-size: 1rem;
+  
+  
 
 }
- .dropdown{
-    position: relative;
-    display: inline-block;
+
+.foot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  color: lightseagreen;
+  border-top: 2px solid lightskyblue;
+}
+.text.single-line {
+ overflow-wrap: anywhere;
+ padding-right: 35px;
+}
+/***** scrollbar Section *****/
+
+/* width */
+ul::-webkit-scrollbar {
+  width: 1rem;
+}
+
+/* Track */
+ul::-webkit-scrollbar-track {
+  background: var(--supporting-color);
+}
+
+/* Handle */
+ul::-webkit-scrollbar-thumb {
+  background:lightskyblue;
+  border-radius: 50px;
+}
+
+/* Handle on hover */
+ul::-webkit-scrollbar-thumb:hover {
+  background: lightseagreen ;
+}
+
+/***** End scrollbar Section *****/
+
+/***** Media Queries *****/ 
+@media (width <= 1120px){
+  
+  
+}
+
+@media(width <=1074px){
+  
+}
+
+@media(width <=945px){
+  
+}
+@media(width <=835px){
+  html{
+    font-size: 58%;
+  }
+}
+
+@media(width <=498px){
+  .foot{
+    display:grid;
+    padding:10px 0 20px 0;
+  }
+
+  .section-add--task{
+    margin-bottom:12px;
+  }
+}
+
+@media(width<=410px){
+  html{
+    font-size: 50%;
+  }
+  button{
+    padding: 5px 10px 5px  8px;
+    gap:.2rem;
+  }
+  .section-filter{
+    & #filter{
+      padding: 7px 10px 7px 15px;
+    }
+    & button{
+      padding:8px 10px 8px 15px ;
+    }
+  }
+  
+}
+
+@media(width <=375px){
+  html{
+    font-size: 50%;
+  }
+  button{
+    padding: 5px 8px 5px  6px;
+    gap: 0.1rem;
+    font-size: 1.5rem;
+  }
+  .section-filter{
+    & #filter{
+      padding: 5px 4px 5px 12px;
+      font-size: 1.5rem;
+      
+    }
     
-
- }
-
- .foot{
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    padding: 20px;
-    margin-top: 50px;
-    margin-bottom: 0;
-    color: lightseagreen;
-    border-top: 2px solid lightskyblue;
- }
- .text.single-line {
-    overflow: auto;
-    text-overflow:ellipsis;
-    white-space: nowrap;
+    & button{
+      padding:6px 4px 6px 8px ;
+    }
   }
-  
-
-  #filter{
-    background: rgb(22, 22, 22);
-    color: lightseagreen;
-    padding: 15px 40px;
-    font-size: 20px;
-    border: none;
-    outline:none;
-    border: 2px solid lightseagreen;
-    border-radius: 20px;
-    cursor:pointer;
-    align-items: center;
-    display: inline-flex;
-    justify-content: space-between;
-    gap: 10px;
-    text-align: start;
-    transition: 0.5s;
-    position: relative;
-  }
-  #filter:hover{
-    color:black;
-    background-color: lightseagreen;
-    box-shadow: 4px 0px 16px 4px lightseagreen;
-  }
-  
-  /*responsive*/
-  @media only screen and (max-width: 530px) {
-    .container {
-        margin: 0 10px;
-        max-width: 100%;
-        min-width: 100%;
-    }
-
-    .todo-app {
-        margin: 50px auto 20px;
-        padding: 20px;
-    }
-
-    ul li {
-        padding: 15px 10px 15px 50px;
-        font-size: 18px;
-    }
-
-    .todo-filter {
-        padding-bottom: 15px;
-        gap: 20px;
-    }
-    button{
-        padding: 8px 20px ;
-        font-size: 15px;
-        gap:5px;
-    }
-    #filter{
-        padding: 5px 10px;
-        gap:0px;
-        text-align: center;
-    }
-    input{
-        padding-left: 10px;
-        font-size: 15px;
-       
-    }
-    .row{
-        
-        justify-content: space-between;
-    }
-    ul li{
-        display: flex;
-        align-items: center;
-        font-size: 15px;
-    }
-    ul li::before{
-        top:auto;
-        height: 12px;
-        width: 12px;
-
-    }
-   
-
-    .foot {
-        font-size: 16px;
-        padding: 10px;
-    }
 }
+ /***** End Media Queries *****/
+
+
+
   
+
+
+

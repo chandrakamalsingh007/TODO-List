@@ -9,11 +9,11 @@ function addTask(){
 
     }else{
         let li = document.createElement("li");
-        let output = document.createElement("output");
-        output.className = "text single-line";
-        output.textContent = inputBox.value; // Use textContent to set the content
+        let para = document.createElement("p");
+        para.className = "text single-line";
+        para.textContent = inputBox.value; // Use textContent to set the content
 
-        li.appendChild(output);
+        li.appendChild(para);
         
         // Append the list item to the list container
         listContainer.appendChild(li);
@@ -39,6 +39,8 @@ listContainer.addEventListener("click",function(e){
     }
     
 },false);
+
+
 
 function saveData(){
     localStorage.setItem("data", listContainer.innerHTML);
