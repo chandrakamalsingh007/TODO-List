@@ -220,7 +220,7 @@ button{
     background-position: center;
     border-radius: 50%;
     top: 12px;
-    left: 8px;
+    left: 4px;
     
 }
 
@@ -338,8 +338,7 @@ ul::-webkit-scrollbar-thumb:hover {
   }
   .section-list{
     & ul li::before{
-      top: 8px;
-      left: 8px;
+      top: 10px;
       
   }
   
